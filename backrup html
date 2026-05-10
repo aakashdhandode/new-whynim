@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventex - Full Event Template</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --purple-main: #9c27b0;
+            --purple-dark: #7b1fa2;
+            --accent-red: #ff4a57;
+            --dark-blue: #0b0d39;
+            --light-bg: #fdfdfd;
+        }
+
+        body { font-family: 'Arial', sans-serif; overflow-x: hidden; color: #444; }
+
+        /* --- Floating Background Icons --- */
+        .bg-icon { position: absolute; z-index: 1; opacity: 0.15; animation: floatingIcon 6s ease-in-out infinite; }
+        .dots-grid { top: 10%; left: 5%; display: grid; grid-template-columns: repeat(8, 8px); grid-gap: 12px; }
+        .dots-grid span { width: 8px; height: 8px; background: #999; border-radius: 50%; }
+        .shape-circle { top: 20%; left: 40%; width: 50px; height: 50px; border: 6px solid var(--purple-main); border-radius: 50%; }
+        .shape-triangle { bottom: 15%; left: 10%; width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-bottom: 35px solid var(--accent-red); }
+        
+        @keyframes floatingIcon {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* --- Header & Navbar --- */
+        .top-bar { background: var(--purple-main); color: white; padding: 10px 0; font-size: 13px; }
+        .navbar-brand { font-weight: 800; color: var(--dark-blue) !important; font-size: 28px; }
+        .nav-link { font-weight: 600; color: var(--dark-blue); margin: 0 10px; }
+        .btn-contact { background: var(--purple-main); color: white; padding: 10px 25px; border-radius: 5px; text-decoration: none; }
+
+        /* --- Hero Section --- */
+        .hero-section { position: relative; min-height: 90vh; background: var(--light-bg); display: flex; align-items: center; }
+        .hero-content h1 { font-size: clamp(40px, 6vw, 75px); font-weight: 900; color: var(--dark-blue); line-height: 1.1; }
+        .hero-content h1 span { color: var(--accent-red); }
+        .hero-content p { font-size: 18px; margin: 25px 0; max-width: 500px; }
+        
+        .right-image-wrap { 
+            position: absolute; top: 0; right: 0; width: 45%; height: 100%; 
+            background: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80') center/cover;
+            clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 0% 100%, 15% 50%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        
+        /* Play Button */
+        .play-btn {
+            width: 80px; height: 80px; background: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2); position: relative;
+        }
+        .play-btn::after {
+            content: ''; position: absolute; width: 100%; height: 100%;
+            border: 2px solid white; border-radius: 50%; animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% {transform: scale(1); opacity: 1;} 100% {transform: scale(1.8); opacity: 0;} }
+
+        /* --- Stats Bar --- */
+        .stats-bar { background: var(--purple-main); color: white; padding: 40px 0; margin-top: -50px; position: relative; z-index: 10; border-radius: 10px; }
+        .stat-item h2 { font-weight: 800; font-size: 40px; margin: 0; }
+
+        /* --- Sections Common --- */
+        .section-padding { padding: 100px 0; position: relative; }
+        .section-title { text-align: center; margin-bottom: 60px; }
+        .section-title h2 { font-size: 45px; font-weight: 800; color: var(--dark-blue); }
+        .section-title h2 span { color: var(--accent-red); }
+
+        /* --- Cards & Components --- */
+        .feature-card { padding: 40px; border: 1px solid #eee; transition: 0.3s; background: white; height: 100%; }
+        .feature-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .feature-card i { font-size: 40px; color: var(--accent-red); margin-bottom: 20px; display: block; }
+
+        .speaker-card { text-align: center; margin-bottom: 30px; }
+        .speaker-img { width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        
+        .pricing-card { padding: 50px 30px; border-radius: 15px; text-align: center; border: 1px solid #eee; transition: 0.3s; }
+        .pricing-card.featured { background: var(--accent-red); color: white; border: none; transform: scale(1.05); }
+        .pricing-card h3 { font-size: 50px; font-weight: 800; }
+
+        /* --- Footer --- */
+        footer { background: var(--dark-blue); color: white; padding: 80px 0 20px; }
+        .footer-logo { font-size: 30px; font-weight: 800; margin-bottom: 20px; display: block; color: white; text-decoration: none; }
+
+        @media (max-width: 991px) {
+            .right-image-wrap { position: relative; width: 100%; height: 400px; clip-path: none; margin-top: 50px; }
+            .hero-section { text-align: center; padding-top: 50px; }
+            .hero-content p { margin: 20px auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar d-none d-lg-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <i class="fas fa-phone"></i> +02 123 4567 894 &nbsp; | &nbsp; <i class="fas fa-envelope"></i> info@example.com
+                </div>
+                <div class="col-md-4 text-end">
+                    <i class="fab fa-facebook mx-2"></i> <i class="fab fa-twitter mx-2"></i> <i class="fab fa-instagram mx-2"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg py-3 sticky-top bg-white">
+        <div class="container">
+            <a class="navbar-brand" href="#">EVENTEX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Speakers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Schedule</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                </ul>
+                <a href="#" class="btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="bg-icon dots-grid">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="bg-icon shape-circle"></div>
+        <div class="bg-icon shape-triangle"></div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content animate__animated animate__fadeInLeft">
+                        <h1>The Largest <span>Event</span> <br> In The World</h1>
+                        <p>Join the most influential conference of 2026. Network with industry experts and learn about the latest trends in technology and design.</p>
+                        <div class="mt-4">
+                            <button class="btn btn-primary bg-purple py-3 px-5 border-0 me-3 shadow" style="background: var(--purple-main);">Get Tickets</button>
+                            <button class="btn btn-outline-danger py-3 px-5 border-2">See Schedule</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-image-wrap">
+            <div class="play-btn">
+                <i class="fas fa-play text-danger fa-2x ms-1"></i>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar shadow">
+            <div class="row text-center">
+                <div class="col-6 col-md-3 border-end border-light stat-item">
+                    <h2>2027</h2>
+                    <p class="mb-0">Year</p>
+                </div>
+                <div class="col-6 col-md-3 border-end border-light stat-item">
+                    <h2>11</h2>
+                    <p class="mb-0">Speakers</p>
+                </div>
+                <div class="col-6 col-md-3 border-end border-light stat-item">
+                    <h2>48</h2>
+                    <p class="mb-0">Events</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h2>21</h2>
+                    <p class="mb-0">Days</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-microphone"></i>
+                        <h4>Professional Speakers</h4>
+                        <p>Best speakers around the world with years of experience in various fields.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Event Schedule</h4>
+                        <p>Get a detailed breakdown of all events and speakers timing for each day.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Network Growth</h4>
+                        <p>Connect with amazing people and grow your professional circle efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our <span>Speakers</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="https://i.pravatar.cc/300?u=1" alt="S1" class="speaker-img">
+                        <h5>Alex Johnson</h5>
+                        <p class="text-muted">CEO of Tech</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="https://i.pravatar.cc/300?u=2" alt="S2" class="speaker-img">
+                        <h5>Maria Garcia</h5>
+                        <p class="text-muted">Design Lead</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="https://i.pravatar.cc/300?u=3" alt="S3" class="speaker-img">
+                        <h5>John Doe</h5>
+                        <p class="text-muted">Marketing Head</p>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="speaker-card">
+                        <img src="https://i.pravatar.cc/300?u=4" alt="S4" class="speaker-img">
+                        <h5>Sarah Smith</h5>
+                        <p class="text-muted">Frontend Expert</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get Your <span>Ticket</span></h2>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h5>Early Bird</h5>
+                        <h3>$199</h3>
+                        <p>Standard Entry + Snacks</p>
+                        <button class="btn btn-outline-danger mt-4">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card featured">
+                        <h5>Regular</h5>
+                        <h3>$399</h3>
+                        <p>Standard Entry + Lunch + Goodies</p>
+                        <button class="btn btn-light mt-4">Buy Ticket</button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <h5>VIP</h5>
+                        <h3>$999</h3>
+                        <p>All Access + Dinner + VIP Lounge</p>
+                        <button class="btn btn-outline-danger mt-4">Buy Ticket</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-4">
+                    <a href="#" class="footer-logo">EVENTEX</a>
+                    <p>Building the world's most innovative event experience for professionals and students alike.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Speakers</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Tickets</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 ms-auto">
+                    <h5>Newsletter</h5>
+                    <div class="input-group mt-3">
+                        <input type="text" class="form-control" placeholder="Email Address">
+                        <button class="btn btn-danger">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center pt-3">
+                <p class="mb-0 small">© 2026 Eventex Event Template. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</body>
+</html>
