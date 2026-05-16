@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WYNIM Exhibitions - Our Services</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- Google Fonts Integration --- */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Premium Deep Crimson/Purple Section Core --- */
+.wynim-services-section {
+    background-color: #280120; /* Your designated precise color token */
+    background-image: url('https://confex-html.wpthemeverse.com/images/page-bg.png'); /* Provided pattern image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 0;
+}
+
+/* --- Typography Setup --- */
+.wynim-sub-title {
+    color: #e6397b;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+}
+
+.wynim-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.highlight-pink {
+    color: #e6397b;
+}
+
+.text-pink {
+    color: #ff5294;
+}
+
+.tracking-wider {
+    letter-spacing: 1.5px;
+}
+
+/* --- Header Global Action Buttons --- */
+.btn-gradient {
+    background: linear-gradient(90deg, #b0125a 0%, #e6397b 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 57, 123, 0.4);
+}
+
+.btn-outline-light-custom {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light-custom:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+/* --- The Asymmetrical Custom Ticket Component --- */
+.ticket-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* --- Left Image Panel --- */
+.ticket-img-pane {
+    width: 100%;
+    max-width: 300px;
+    min-height: 250px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.ticket-img-pane img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.img-badge {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: rgba(40, 1, 32, 0.85);
+    backdrop-filter: blur(5px);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Center Text Content Panel --- */
+.ticket-info-pane {
+    color: rgba(255, 255, 255, 0.75);
+    border-right: 2px dashed rgba(255, 255, 255, 0.15); /* Replicates the inner ticket separation line */
+}
+
+.ticket-title {
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+.ticket-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* --- Right Side Action Panel --- */
+.ticket-action-pane {
+    width: 100%;
+    max-width: 220px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* Ticket Semicircle Cutouts (Top & Bottom Center Intersections) */
+.ticket-action-pane::before,
+.ticket-action-pane::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #280120; /* Must match parent bg color to simulate punch cuts */
+    border-radius: 50%;
+    left: -12px;
+}
+.ticket-action-pane::before { top: -12px; }
+.ticket-action-pane::after { bottom: -12px; }
+
+.mini-feat-badge {
+    background: rgba(230, 57, 123, 0.1) !important;
+    color: #e6397b !important;
+    font-weight: 500;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.btn-reserve {
+    background-color: #e6397b;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 11px 20px;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-reserve:hover {
+    background-color: #b0125a;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* --- Hover Interactive Animation --- */
+.animate-ticket:hover {
+    transform: translateY(-5px);
+    border-color: rgba(230, 57, 123, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
+}
+
+.animate-ticket:hover .ticket-img-pane img {
+    transform: scale(1.05);
+}
+
+/* --- Micro-Responsive Refinements --- */
+@media (max-width: 991px) {
+    .wynim-heading {
+        font-size: 2.3rem;
+    }
+    .ticket-card {
+        flex-direction: column;
+    }
+    .ticket-img-pane {
+        max-width: 100%;
+        height: 220px;
+    }
+    .ticket-info-pane {
+        border-right: none;
+        border-bottom: 2px dashed rgba(255, 255, 255, 0.15);
+    }
+    .ticket-action-pane {
+        max-width: 100%;
+        padding: 30px !important;
+    }
+    /* Reposition ticket cuts for stacked layouts on mobile screen viewports */
+    .ticket-action-pane::before,
+    .ticket-action-pane::after {
+        left: auto;
+        top: -12px;
+    }
+    .ticket-action-pane::before { left: -12px; }
+    .ticket-action-pane::after { right: -12px; }
+}
+    </style>
+</head>
+<body>
+
+<section class="wynim-services-section position-relative overflow-hidden">
+    <div class="container py-5 position-relative z-2">
+        
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <span class="wynim-sub-title text-uppercase fw-bold d-block mb-2">Our Specialized Offerings</span>
+                <h2 class="wynim-heading text-white mb-3">Explore WYNIM <span class="highlight-pink">Services</span></h2>
+            </div>
+            <div class="col-lg-6 d-flex align-items-center justify-content-lg-end gap-3 mt-3 mt-lg-0">
+                <a href="#" class="btn btn-gradient shadow">Explore All Solutions <i class="fa-solid fa-arrow-right-long ms-2"></i></a>
+                <a href="#" class="btn btn-outline-light-custom">Download Brochure <i class="fa-solid fa-download ms-2"></i></a>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column gap-4">
+            
+            <div class="ticket-card d-flex flex-column flex-lg-row align-items-stretch shadow-lg animate-ticket">
+                <div class="ticket-img-pane position-relative">
+                    <img src="https://images.unsplash.com/photo-1565034946487-077786996e27?auto=format&fit=crop&w=600&q=80" alt="Exhibition Stall Fabrication">
+                    <div class="img-badge">Fabrication Expert</div>
+                </div>
+                
+                <div class="ticket-info-pane p-4 p-md-5 d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="d-flex align-items-center gap-2 mb-2 text-pink">
+                        <i class="fa-solid fa-cubes-stacked"></i>
+                        <span class="text-uppercase small fw-bold tracking-wider">Shape your Brand Here!!</span>
+                    </div>
+                    <h3 class="ticket-title text-white mb-3">Exhibitions</h3>
+                    <p class="ticket-text mb-0">
+                        Wynim Exhibitions offers stall fabrication solutions that are unique and tailored according to each client’s requirements. We understand that every brand needs to send a message to their target audience. We therefore strive to incorporate that message in every installation that we design. Our expertise in creating and developing exhibition stalls of various sizes has helped us win the confidence of many large corporate clients over the years.
+                    </p>
+                </div>
+                
+                <div class="ticket-action-pane p-4 text-center d-flex flex-column justify-content-center align-items-center position-relative">
+                    <div class="features-mini-list mb-3">
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> Custom Design</span>
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> Global Setup</span>
+                    </div>
+                    <a href="#" class="btn btn-reserve shadow-sm w-100">Enquire Now <i class="fa-solid fa-arrow-trend-up ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="ticket-card d-flex flex-column flex-lg-row align-items-stretch shadow-lg animate-ticket">
+                <div class="ticket-img-pane position-relative">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="Corporate Events and Conferences">
+                    <div class="img-badge">Live Production</div>
+                </div>
+                
+                <div class="ticket-info-pane p-4 p-md-5 d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="d-flex align-items-center gap-2 mb-2 text-pink">
+                        <i class="fa-solid fa-champagne-glasses"></i>
+                        <span class="text-uppercase small fw-bold tracking-wider">For Events As Unique as You!!</span>
+                    </div>
+                    <h3 class="ticket-title text-white mb-3">Events</h3>
+                    <p class="ticket-text mb-0">
+                        We offer Events include Product Launch, Business Meet, Conferences, Dealers' Meet, Corporate Events, Live Events, etc. Our services include everything from Venue management, Stage Design and Productions, Audio-Visual to Sound taking care of all printing and equipment rentals and on-day event management services. From stage setup to sound and lights installation, our team is more than capable of managing the most ardent tasks without compromising on quality.
+                    </p>
+                </div>
+                
+                <div class="ticket-action-pane p-4 text-center d-flex flex-column justify-content-center align-items-center position-relative">
+                    <div class="features-mini-list mb-3">
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> Audio-Visual</span>
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> AV Production</span>
+                    </div>
+                    <a href="#" class="btn btn-reserve shadow-sm w-100">Enquire Now <i class="fa-solid fa-arrow-trend-up ms-1"></i></a>
+                </div>
+            </div>
+
+            <div class="ticket-card d-flex flex-column flex-lg-row align-items-stretch shadow-lg animate-ticket">
+                <div class="ticket-img-pane position-relative">
+                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?auto=format&fit=crop&w=600&q=80" alt="Retail Branding Solutions">
+                    <div class="img-badge">B2B Branding</div>
+                </div>
+                
+                <div class="ticket-info-pane p-4 p-md-5 d-flex flex-column justify-content-center flex-grow-1">
+                    <div class="d-flex align-items-center gap-2 mb-2 text-pink">
+                        <i class="fa-solid fa-store"></i>
+                        <span class="text-uppercase small fw-bold tracking-wider">Let’s Build Your Brand!!</span>
+                    </div>
+                    <h3 class="ticket-title text-white mb-3">Retail Branding</h3>
+                    <p class="ticket-text mb-0">
+                        With years of experience and successful history behind us, we have established a reliable presence in the industry for Retail-Branding. We understand that our clients are of paramount importance to the promotional industry and require quality service providers who can take their products and brands to the masses. For this purpose, and reaching the maximum audience, we provide all kinds of branding solutions including ACP, GSB, NLB, etc.
+                    </p>
+                </div>
+                
+                <div class="ticket-action-pane p-4 text-center d-flex flex-column justify-content-center align-items-center position-relative">
+                    <div class="features-mini-list mb-3">
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> ACP / GSB Signage</span>
+                        <span class="badge mini-feat-badge mb-1"><i class="fa-solid fa-check me-1"></i> Retail Fitouts</span>
+                    </div>
+                    <a href="#" class="btn btn-reserve shadow-sm w-100">Enquire Now <i class="fa-solid fa-arrow-trend-up ms-1"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

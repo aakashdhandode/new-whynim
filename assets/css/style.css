@@ -13,9 +13,12 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
   color: var(--color-dark);
   background-color: #ffffff;
+}
+p{
+  font-family: "Roboto", sans-serif;
 }
 
 img {
@@ -77,9 +80,9 @@ img {
 
 
 .stats-bar {
-    background: var(--purple-main);
+  background: linear-gradient(90deg, #8F0177 0%, #DE1A58 100%);
     color: white;
-    padding: 40px 0;
+    padding: 25px 0;
     margin-top: -50px;
     position: relative;
     z-index: 10;
@@ -768,7 +771,7 @@ footer {
 
 
   :root {
-            --purple-main: #9c27b0;
+            --purple-main: linear-gradient(90deg, #8F0177 0%, #DE1A58 100%);
             --dark-blue: #0b0d39;
             --accent-red: #ff4a57;
         }
@@ -777,7 +780,7 @@ footer {
         .hero-section {
             position: relative;
             height: 90vh;
-            background-color: #fdfdfd;
+            background-color: #ffebfb;
             overflow: hidden; /* Bahar nikalte icons ko chhupane ke liye */
         }
 
@@ -943,3 +946,1030 @@ footer {
         .slick-dots { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); list-style: none; z-index: 10; padding: 0; }
         .slick-dots li button { width: 12px; height: 12px; border: 2px solid #ccc; border-radius: 50%; background: transparent; font-size: 0; }
         .slick-dots li.slick-active button { background: var(--accent-red); border-color: var(--accent-red); }
+
+
+
+
+        /* --- Google Fonts (Similar Typography) --- */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a3a;
+} */
+
+p {
+    /* color: rgb(34, 27, 104); */
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6 {
+    /* color: rgb(34, 27, 104); */
+    font-family: Oswald, sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    transition: 0.3s ease-in;
+}
+
+/* --- Section Layout --- */
+.event-section {
+    padding: 80px 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+/* --- Cards Styling & Animations --- */
+.custom-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: none;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.icon-box.red-icon {
+    color: #ff4a5a; /* Coral/Red accent color from image */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #161c42;
+}
+
+.learn-more-link {
+    color: #161c42;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.learn-more-link:hover {
+    color: #ff4a5a;
+}
+
+.learn-more-link i {
+    transition: transform 0.3s ease;
+}
+
+.learn-more-link:hover i {
+    transform: translateX(5px);
+}
+
+/* --- Typography & Right Content --- */
+.sub-title {
+    color: #8a2be2; /* Purple top tag */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.main-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.highlight-text {
+    color: #ff4a5a;
+}
+
+
+
+/* --- Button Styling --- */
+.btn-join {
+    background: #a020f0; /* Purple button */
+    color: #ffffff;
+    padding: 12px 35px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-join:hover {
+    background: #8015c8;
+    color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* --- Floating Background Shapes & Ambient Animation --- */
+.bg-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+    animation: floatingAmbient 6s ease-in-out infinite alternate;
+}
+
+.shape-plus {
+    top: 5%;
+    left: 3%;
+    font-size: 2.5rem;
+    color: #e2e8f0;
+    font-weight: 300;
+}
+
+.shape-circle-lg {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(240,240,245,1) 0%, rgba(255,255,255,0) 70%);
+    top: 20%;
+    left: -5%;
+}
+
+.shape-circle-sm {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+    border-radius: 50%;
+    right: 5%;
+    top: 45%;
+    filter: blur(1px);
+}
+
+.shape-zigzag {
+    right: 12%;
+    top: 15%;
+    transform: rotate(-15deg);
+}
+
+/* Smooth ambient drifting for background objects */
+@keyframes floatingAmbient {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(15px) rotate(5deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .main-heading {
+        font-size: 2.2rem;
+    }
+    .shape-zigzag, .shape-circle-sm {
+        display: none; /* Hides tiny details on smaller viewports to prevent clutter */
+    }
+}
+
+
+
+
+/* --- About Section Core Layout --- */
+.about-section {
+    
+       /* background: #fafafa;  */
+           /* background-color: #280120; */
+    /* background-image: url(https://confex-html.wpthemeverse.com/images/page-bg.png); */
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    min-height: 100vh;
+}
+
+.about-sub-title {
+    color: #8a2be2; /* Same purple identity */
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+/* .about-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: #161c42;
+    line-height: 1.3;
+} */
+
+.highlight-coral {
+    color: #ff4a5a; /* Coral red contrast color */
+}
+
+/* .about-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4a5073;
+    text-align: justify;
+} */
+
+/* --- Bullet Customizations --- */
+.about-list li {
+     color: rgb(34, 27, 104);
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.bullet-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #ff4a5a;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 12px;
+}
+
+/* --- Button Styling --- */
+.btn-learn-more {
+    background: #a020f0;
+    color: #ffffff;
+    padding: 12px 35px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-learn-more:hover {
+    background: #8015c8;
+    color: #ffffff;
+    transform: scale(1.03);
+}
+
+/* --- Image Grid Custom Border Radius --- */
+.img-wrapper {
+    overflow: hidden;
+    border-radius: 16px; /* Controls identical round borders matching image */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.grid-img-top {
+    height: 280px;
+    object-fit: cover;
+}
+
+.grid-img-bottom {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Image Subtle Zoom Animation */
+.animate-img img {
+    transition: transform 0.5s ease;
+}
+
+.animate-img:hover img {
+    transform: scale(1.04);
+}
+
+/* --- Background Vector Elements --- */
+.about-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+.shape-zigzag-top {
+    left: 2%;
+    top: 8%;
+    transform: rotate(25deg);
+    animation: floatingZigZag 5s ease-in-out infinite alternate;
+}
+
+/* Dot Grid layout using CSS grid */
+.shape-dot-grid {
+    bottom: 5%;
+    left: 8%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    animation: driftDots 7s ease-in-out infinite alternate;
+}
+
+.shape-dot-grid .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #a3e635; /* Soft neon green dots */
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+/* --- Ambient Animations --- */
+@keyframes floatingZigZag {
+    0% { transform: translateY(0px) rotate(25deg); }
+    100% { transform: translateY(12px) rotate(20deg); }
+}
+
+@keyframes driftDots {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(10px, -8px); }
+}
+
+/* Responsive Scaling fixes */
+@media (max-width: 991px) {
+    .about-heading {
+        font-size: 2.1rem;
+    }
+    .grid-img-top {
+        height: 220px;
+    }
+}
+
+
+
+
+/* --- Testimonial Section Core Layout --- */
+.testimonial-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.testi-sub-title {
+    color: #8a2be2;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.testi-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #161c42;
+    line-height: 1.3;
+}
+
+.highlight-coral {
+    color: #ff4a5a;
+}
+
+.testi-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #4a5073;
+}
+
+/* --- Testimonial Slider Cards --- */
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.02);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    margin: 15px 0;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.avatar-wrapper {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #f8f9fa;
+}
+
+.avatar-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.quote-mark {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    font-size: 4.5rem;
+    font-family: 'Georgia', serif;
+    color: #ff4a5a;
+    line-height: 1;
+    opacity: 0.8;
+}
+
+.client-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #161c42;
+}
+
+.client-designation {
+    font-size: 0.85rem;
+    color: #2a2c5a;
+    font-weight: 600;
+}
+
+/* --- Navigation Controls Layout --- */
+.slider-controls {
+    position: relative;
+    z-index: 2;
+}
+
+.control-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.prev-btn {
+    background-color: #ff4a5a;
+    color: #ffffff;
+    border: none;
+}
+
+.prev-btn:hover {
+    background-color: #e03645;
+}
+
+.next-btn {
+    background-color: #ffffff;
+    color: #ff4a5a;
+    border: 1px solid #ff4a5a;
+}
+
+.next-btn:hover {
+    background-color: #ff4a5a;
+    color: #ffffff;
+}
+
+/* --- Background Vector Circles & Details --- */
+.testi-shape {
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+.shape-zigzag-left {
+    left: 3%;
+    top: 8%;
+    transform: rotate(-10deg);
+}
+
+/* Large abstract circular layers from design */
+.shape-ring-bottom-left {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 24px solid rgba(255, 74, 90, 0.15);
+    left: 4%;
+    bottom: 8%;
+}
+
+.shape-ring-top-right {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 15px solid #ededf5;
+    right: 2%;
+    top: 2%;
+}
+
+.shape-ring-bottom-right {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240,240,245,1) 0%, rgba(255,255,255,0) 70%);
+    right: 10%;
+    bottom: -5%;
+}
+
+/* Responsive updates */
+@media (max-width: 991px) {
+    .testi-heading {
+        font-size: 2.2rem;
+    }
+    .testimonial-card {
+        margin: 10px 5px;
+    }
+    .slider-controls {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+
+
+
+.exexpo-section {
+    padding: 80px 0;
+    /* Clean premium pink ambient gradient flow */
+    background: linear-gradient(180deg, #fff2f6 0%, #ffd0e0 60%, #f4629a 100%);
+    min-height: 100vh;
+}
+
+/* --- Header Section Typography --- */
+.exexpo-sub-title {
+    color: #b0125a;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.exexpo-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: #b0125a;
+    line-height: 1.2;
+}
+
+.exexpo-heading .highlight-dark {
+    color: #1e1124;
+}
+
+.exexpo-description {
+    font-size: 1.05rem;
+    color: #4e3e52 !important;
+    line-height: 1.6;
+    max-width: 95%;
+}
+
+/* --- Action Button --- */
+.btn-gradient {
+    background: linear-gradient(90deg, #810953 0%, #b0125a 100%);
+    color: #ffffff;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(129, 9, 83, 0.3) !important;
+}
+
+/* --- Feature Cards Structure --- */
+.feature-box {
+    border-radius: 16px;
+    border: none;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    min-height: 135px; /* Ensures balanced height uniformity */
+}
+
+.feature-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e1124;
+}
+
+.feature-text {
+    color: #5c4d61 !important;
+    line-height: 1.5;
+}
+
+.icon-circle {
+    color: #b0125a !important;
+    background: rgba(176, 18, 90, 0.06);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* --- Center Exhibition Graphic Setup --- */
+.center-image-mask {
+    width: 100%;
+    max-width: 360px;
+    height: 490px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+    background-color: #ffffff;
+}
+
+.main-center-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.center-image-mask:hover .main-center-img {
+    transform: scale(1.05);
+}
+
+/* --- Smooth Mechanical Spinning Sticker --- */
+.rotating-badge {
+    position: absolute;
+    top: -25px;
+    right: 12%;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    width: 110px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotating-badge svg {
+    animation: spinBadge 20s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.badge-center-dot {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: radial-gradient(circle, #f4629a 0%, #b0125a 100%);
+    border-radius: 50%;
+    box-shadow: inset 0 2px 5px rgba(255,255,255,0.3);
+}
+
+@keyframes spinBadge {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Card Hover Effects --- */
+.animate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(129, 9, 83, 0.12) !important;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+    .exexpo-heading {
+        font-size: 2.4rem;
+    }
+    .center-image-mask {
+        height: 390px;
+        max-width: 310px;
+    }
+    .rotating-badge {
+        right: 18%;
+        top: -15px;
+    }
+    .feature-box {
+        min-height: auto;
+    }
+}
+
+
+
+/* --- Section Master Wrapper --- */
+.wynim-premium-section {
+    background-color: #280120; /* Target precise color token */
+    background-image: url('https://confex-html.wpthemeverse.com/images/page-bg.png'); /* Pattern file */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    min-height: 100vh;
+}
+
+/* --- Typographical Elements --- */
+.wynim-tag {
+    color: #e6397b;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+}
+
+.wynim-title {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.text-gradient-pink {
+    background: linear-gradient(90deg, #ff5294 0%, #b0125a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.wynim-desc {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* --- Luxury Card Component Styling --- */
+.premium-service-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 24px;
+    height: 100%;
+    min-height: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+}
+
+/* Picture Lens Masking */
+.card-image-lens {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-image-lens img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Premium Gradient overlay mask over image to prevent illegible text nodes */
+.card-image-lens::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* From clear to solid corporate deep background tone mapping */
+    background: linear-gradient(180deg, rgba(40, 1, 32, 0) 20%, rgba(40, 1, 32, 0.75) 55%, #280120 95%);
+    z-index: 2;
+    transition: opacity 0.4s ease;
+}
+
+/* Card Metadata Text Layer */
+.card-overlay-details {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+}
+
+.card-icon-sphere {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ff5294;
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.card-motivational {
+    color: #e6397b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-uppercase: uppercase;
+    display: block;
+}
+
+.card-headline {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.card-summary {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6) !important;
+    margin-bottom: 20px;
+}
+
+.card-action-trigger {
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.card-action-trigger i {
+    transition: transform 0.3s ease;
+}
+
+/* --- Row 2 Custom Aspect Sizing (Longer Panels) --- */
+.premium-service-card.horizontal-variant {
+    min-height: 380px;
+}
+
+/* --- Interactive Micro Actions --- */
+.animate-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(230, 57, 123, 0.4);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+}
+
+.animate-card:hover .card-image-lens img {
+    transform: scale(1.08);
+}
+
+.animate-card:hover .card-icon-sphere {
+    background: linear-gradient(135deg, #b0125a 0%, #e6397b 100%);
+    border-color: transparent;
+    color: #ffffff;
+    transform: rotate(10deg);
+}
+
+.animate-card:hover .card-action-trigger {
+    color: #e6397b;
+}
+
+.animate-card:hover .card-action-trigger i {
+    transform: translateX(5px);
+}
+
+/* --- Ambient Glowing Orbs Background Effect --- */
+.glow-blur-element {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(230, 57, 123, 0.12) 0%, rgba(40, 1, 32, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+.placement-top { top: -10%; left: -5%; }
+.placement-bottom { bottom: -10%; right: -5%; }
+
+/* --- Fully Responsive Fluid Breakpoints --- */
+@media (max-width: 991px) {
+    .wynim-title {
+        font-size: 2.4rem;
+    }
+    .premium-service-card, 
+    .premium-service-card.horizontal-variant {
+        min-height: 420px;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+
+/* --- Section Master Wrapper (Clean White Background) --- */
+.wynim-contact-section-white {
+    background-color: #ffffff; /* Clean Solid White Background */
+    padding: 100px 0;
+    min-height: 100vh;
+}
+
+/* --- Left Column Elements (Updated for Light Theme) --- */
+.contact-tag {
+    color: #e6397b;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+}
+
+.contact-heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #280120; /* Dark corporate color for strong readability */
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+}
+
+.contact-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5c4856 !important; /* Muted dark tone instead of white-opacity */
+}
+
+/* --- Information Details Card Panel --- */
+.info-details-card {
+    background: linear-gradient(135deg, #b0125a 0%, #700639 100%);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(176, 18, 90, 0.15);
+}
+
+.info-icon-circle {
+    width: 44px;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.info-label {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: 500;
+    text-uppercase: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* --- Right Column Form Panel (Soft Pastel Tint Area) --- */
+.contact-form-card {
+    background: #fff0fa; /* Light pink/pastel soft tint backdrop as per image template */
+    border-radius: 24px;
+    border: 1px solid rgba(230, 57, 123, 0.1);
+    box-shadow: 0 20px 40px rgba(40, 1, 32, 0.04);
+}
+
+.form-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #280120;
+    letter-spacing: -0.5px;
+}
+
+.text-pink {
+    color: #e6397b;
+}
+
+.form-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #5c4856 !important;
+}
+
+/* --- Form Fields Input Control Architecture --- */
+.custom-input, 
+.custom-textarea {
+    background: #ffffff !important;
+    border: 1px solid rgba(40, 1, 32, 0.08) !important;
+    border-radius: 50px !important; /* Capsule pill shapes */
+    padding: 14px 24px !important;
+    font-size: 0.95rem;
+    color: #280120 !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.custom-textarea {
+    border-radius: 20px !important; /* Rounded box for message text */
+    resize: none;
+}
+
+/* Focus States */
+.custom-input:focus, 
+.custom-textarea:focus {
+    border-color: #e6397b !important;
+    box-shadow: 0 0 0 4px rgba(230, 57, 123, 0.15) !important;
+    outline: none;
+}
+
+/* Input Placeholder color adjustments */
+.custom-input::placeholder,
+.custom-textarea::placeholder {
+    color: #a4919e !important;
+    font-weight: 400;
+}
+
+/* --- Submit Action Button --- */
+.btn-submit {
+    background: linear-gradient(90deg, #b0125a 0%, #e6397b 100%);
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(230, 57, 123, 0.3);
+}
+
+/* --- Fluid Screen Responsive Breaks --- */
+@media (max-width: 991px) {
+    .contact-heading {
+        font-size: 2.2rem;
+    }
+    .form-title {
+        font-size: 1.8rem;
+    }
+    .contact-form-card {
+        padding: 30px 20px !important;
+    }
+}
