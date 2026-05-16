@@ -27,7 +27,11 @@ img {
 }
 
 .top-contact-bar {
-  background: var(--bg-main-color);
+   background-color: #280120;
+    background-image: url(https://confex-html.wpthemeverse.com/images/page-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
   color: #fff;
   font-size: 0.9rem;
 }
@@ -200,7 +204,11 @@ img {
 }
 
 .top-contact-bar {
-  background: var(--bg-main-color)  !important;
+  background-color: #280120;
+    background-image: url(https://confex-html.wpthemeverse.com/images/page-bg.png);
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0;
   color: #fff;
   font-size: 0.9rem;
 }
@@ -960,13 +968,13 @@ body {
 } */
 
 p {
-    /* color: rgb(34, 27, 104); */
-    font-size: 16px;
+    color: rgb(34, 27, 104);
+    font-size: 15px;
 }
 h1, h2, h3, h4, h5, h6 {
     /* color: rgb(34, 27, 104); */
     font-family: Oswald, sans-serif;
-    font-weight: 700;
+    /* font-weight: 700; */
     text-transform: capitalize;
     transition: 0.3s ease-in;
 }
@@ -1160,9 +1168,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Bullet Customizations --- */
 .about-list li {
-     color: rgb(34, 27, 104);
-    font-size: 16px;
-    margin-bottom: 12px;
+        color: rgb(27 21 80);
+    font-size: 15px;
+    margin-bottom: 2px;
     display: flex;
     align-items: center;
 }
@@ -1170,7 +1178,7 @@ h1, h2, h3, h4, h5, h6 {
 .bullet-dot {
     width: 6px;
     height: 6px;
-    background-color: #ff4a5a;
+    background-color: #280120;
     border-radius: 50%;
     display: inline-block;
     margin-right: 12px;
@@ -1280,7 +1288,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Testimonial Section Core Layout --- */
 .testimonial-section {
-    padding: 100px 0;
+    padding: 60px 0 6px;
     background-color: #ffffff;
 }
 
@@ -1309,10 +1317,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Testimonial Slider Cards --- */
 .testimonial-card {
-    background: #ffffff;
+    background: #fff8fa75;
     border-radius: 16px;
     border: 1px solid rgba(0,0,0,0.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); */
     margin: 15px 0;
     transition: transform 0.3s ease;
 }
@@ -1377,23 +1385,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .prev-btn {
-    background-color: #ff4a5a;
+    background-color: #2f0b1e;
     color: #ffffff;
     border: none;
 }
 
 .prev-btn:hover {
-    background-color: #e03645;
+    background-color: #2f0b1e;
 }
 
 .next-btn {
     background-color: #ffffff;
-    color: #ff4a5a;
-    border: 1px solid #ff4a5a;
+    color: #2f0b1e;
+    border: 1px solid #2f0b1e;
 }
 
 .next-btn:hover {
-    background-color: #ff4a5a;
+    background-color: #2f0b1e;
     color: #ffffff;
 }
 
@@ -1458,7 +1466,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .exexpo-section {
-    padding: 80px 0;
+    padding: 35px 0;
     /* Clean premium pink ambient gradient flow */
     background: linear-gradient(180deg, #fff2f6 0%, #ffd0e0 60%, #f4629a 100%);
     min-height: 100vh;
@@ -1472,7 +1480,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exexpo-heading {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: #b0125a;
     line-height: 1.2;
@@ -1630,8 +1638,8 @@ h1, h2, h3, h4, h5, h6 {
     background-image: url('https://confex-html.wpthemeverse.com/images/page-bg.png'); /* Pattern file */
     background-size: cover;
     background-position: center;
-    padding: 120px 0;
-    min-height: 100vh;
+    padding: 30px 0;
+    /* min-height: 100vh; */
 }
 
 /* --- Typographical Elements --- */
@@ -1827,8 +1835,8 @@ h1, h2, h3, h4, h5, h6 {
 /* --- Section Master Wrapper (Clean White Background) --- */
 .wynim-contact-section-white {
     background-color: #ffffff; /* Clean Solid White Background */
-    padding: 100px 0;
-    min-height: 100vh;
+    padding: 18px 0;
+    /* min-height: 100vh; */
 }
 
 /* --- Left Column Elements (Updated for Light Theme) --- */
@@ -1971,5 +1979,420 @@ h1, h2, h3, h4, h5, h6 {
     }
     .contact-form-card {
         padding: 30px 20px !important;
+    }
+}
+
+
+
+
+/* --- Master Section Layout Wrapper --- */
+.confex-footer {
+    background-color: #1e0216;
+    background-image: url('https://confex-html.wpthemeverse.com/images/page-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 85px;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.92rem;
+    overflow: hidden;
+}
+
+.footer-top-wrapper {
+    position: relative;
+    z-index: 3;
+}
+
+/* --- General Navigation Links Sizing --- */
+.footer-heading {
+    font-size: 1rem;
+    letter-spacing: 0.8px;
+    margin-bottom: 24px !important;
+}
+.contact-circle-badge i{
+  color: #36022b;
+}
+.footer-links-list li {
+    margin-bottom: 12px;
+}
+
+.footer-links-list li a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    text-decoration: none;
+    font-size: 0.92rem;
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Bullets Animation */
+.footer-links-list li a::before {
+    content: '•';
+    position: absolute;
+    left: -14px;
+    opacity: 0;
+    color: #ff3b80;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links-list li a:hover {
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+.footer-links-list li a:hover::before {
+    opacity: 1;
+}
+
+/* --- Expanded Contact Panel Specifications --- */
+.footer-contact-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.contact-circle-badge {
+    width: 42px;
+    height: 42px;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.contact-row-title {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.45) !important;
+    text-uppercase: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-row-value {
+    font-size: 0.94rem;
+    line-height: 1.4;
+}
+
+.address-fix {
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* --- Bottom Area & New Horizontal Social Icons Row --- */
+.border-top-custom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bottom-social-row {
+    margin: 5px 0;
+}
+
+.bottom-social-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff !important;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-social-icon:hover {
+    background: linear-gradient(135deg, #cc115c 0%, #ff3b80 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255, 59, 128, 0.3);
+    border-color: transparent;
+}
+
+.copyright-text, .legal-link {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.45) !important;
+    text-decoration: none;
+}
+
+.legal-link:hover {
+    color: #ffffff !important;
+}
+
+/* --- Sticky Top Arrow Capsule --- */
+.scroll-top-arrow-btn {
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, #cc115c 0%, #ff3b80 100%);
+    color: #ffffff !important;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.scroll-top-arrow-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(255, 59, 128, 0.45);
+}
+
+/* --- Responsive Layout Configurations --- */
+@media (max-width: 991px) {
+    .confex-footer {
+        padding-top: 55px;
+    }
+    .footer-heading {
+        margin-top: 20px;
+    }
+    .footer-links-list li a::before {
+        display: none;
+    }
+    .footer-contact-stack {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+/* --- Core Blog Section Parameter Wrappers --- */
+.confex-blog-section {
+       background-image: url(https://confex-html.wpthemeverse.com/images/price-plan-bg.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 80px 0;
+}
+
+/* --- Section Title Typography Layout --- */
+.blog-subtitle {
+    color: #e61c5d; /* Dark Pink/Red branding tone used in your screen captures */
+    font-size: 0.88rem;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+.blog-main-title {
+    font-size: 2.3rem;
+    letter-spacing: -0.5px;
+}
+
+.title-highlight {
+    color: #e61c5d;
+}
+
+.blog-header-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Core Grid Blog Card Box Element Elements --- */
+.blog-card-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(230, 28, 93, 0.08) !important;
+}
+
+/* --- Image Scale Animation Mechanics --- */
+.blog-image-wrap {
+    height: 220px;
+}
+
+.blog-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card-item:hover .blog-img {
+    transform: scale(1.06);
+}
+
+/* --- Floating Meta Badges Area --- */
+.blog-category-badge {
+    top: 15px;
+    left: 15px;
+    background: linear-gradient(135deg, #bd0a47 0%, #e61c5d 100%);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 5px 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(230, 28, 93, 0.25);
+}
+
+/* --- Inner Details Typography Setup --- */
+.blog-meta-data {
+    font-size: 0.82rem;
+    font-weight: 500;
+}
+
+.blog-card-title {
+    font-size: 15px;
+    line-height: 1.42;
+    font-weight: 500;
+    font-family: 'Roboto';
+}
+
+.blog-card-title a {
+    transition: color 0.2s ease;
+}
+
+.blog-card-title a:hover {
+    color: #e61c5d !important;
+}
+
+.blog-card-excerpt {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: #5c4d61 !important;
+    line-height: 1.5;
+    font-size: 13px;
+}
+/* --- Interactive Action Controls Link --- */
+.blog-readmore-btn {
+    color: #e61c5d;
+    font-size: 0.88rem;
+    margin-top: auto; /* Aligns to bottom edge smoothly */
+    transition: gap 0.2s ease;
+}
+
+.blog-readmore-btn i {
+    transition: transform 0.2s ease;
+}
+
+.blog-readmore-btn:hover {
+    color: #bd0a47;
+}
+
+.blog-readmore-btn:hover i {
+    transform: translateX(4px);
+}
+
+/* --- Fluid Grid Layout Media Fixes --- */
+@media (max-width: 767px) {
+    .confex-blog-section {
+        padding: 60px 0;
+    }
+    .blog-main-title {
+        font-size: 1.85rem;
+    }
+    .blog-image-wrap {
+        height: 200px;
+    }
+}
+
+
+
+
+
+.ticker-wrapper-row {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+    display: flex;
+}
+
+/* Base Track Flex Model */
+.ticker-track {
+    display: flex;
+    gap: 15px;
+    width: max-content;
+    white-space: nowrap;
+}
+
+/* --- AB SAARI ROWS EK HI DIRECTION (LEFT) ME CHALINGI --- */
+.move-left, .move-right {
+    animation: tickerForward 35s linear infinite;
+}
+
+/* Hover par smoothly pause hone ke liye */
+.ticker-wrapper-row:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+/* Forward Animation Keyframe (Right to Left) */
+@keyframes tickerForward {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(calc(-50% - 12px), 0, 0);
+    }
+}
+
+/* --- Modern Glassmorphism Card Design --- */
+.client-logo-card {
+    width: 200px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-shadow: 0 4px 15px rgba(30, 2, 22, 0.04);
+    border: 1px solid rgba(30, 2, 22, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    flex-shrink: 0;
+}
+
+.client-logo-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.client-logo-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(230, 28, 93, 0.12);
+    border-color: rgba(230, 28, 93, 0.2);
+}
+
+.client-logo-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive Speed Setup */
+@media (max-width: 991px) {
+    .client-logo-card {
+        width: 170px;
+        height: 85px;
+        padding: 12px;
+    }
+    .move-left, .move-right {
+        animation-duration: 25s;
     }
 }
